@@ -1,0 +1,80 @@
+.About {
+    margin-bottom: 4rem;
+    scroll-margin-top: 4rem;
+
+    @media (min-width: 768px) {
+        margin-bottom: 6rem;
+    }
+
+    @media (min-width: 1024px) {
+        margin-bottom: 9rem;
+        scroll-margin-top: 6rem;
+    }
+
+    &__Title-content {
+        position: sticky;
+        top: 0;
+        z-index: 20;
+        margin: 0 -1.5rem 1rem -1.5rem;
+        width: 100vw;
+        background-color: $backgroundColorOpacity;
+        padding: 1.25rem 1.5rem;
+        --tw-backdrop-blur: blur(8px);
+
+        @media (min-width: 768px) {
+            margin-left: -3rem;
+            margin-right: -3rem;
+            padding-left: 3rem;
+            padding-right: 3rem;
+        }
+
+        @media (min-width: 1024px) {
+            position: relative;
+            top: auto;
+            width: 100%;
+            height: 1px;
+            padding: 0;
+            margin: -1px auto;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+            opacity: 0;
+        }
+
+        &__title {
+            font-size: 0.875rem;
+            line-height: 1.25rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: $titleactiveColor;
+            @media (min-width: 1024px) {
+                position: absolute;
+                width: 1px;
+                height: 1px;
+                padding: 0;
+                margin: -1px;
+                overflow: hidden;
+                clip: rect(0, 0, 0, 0);
+                white-space: nowrap;
+                border-width: 0;
+            }
+        }
+    }
+
+    &__resume {
+        margin-bottom: 1rem;
+        text-align: justify;
+
+        &__link {
+            font-weight: 500;
+            color: $titleactiveColor;
+    
+            &:hover, &:focus-visible {
+                color: $hoverColor;
+            }
+        }
+    }
+
+}

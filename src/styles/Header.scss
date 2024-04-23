@@ -1,0 +1,157 @@
+.Header {
+    @media (min-width: 1024px) { 
+        position: sticky;
+        top: 0;
+        display: flex;
+        max-height: 100vh;
+        width: 50%;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 6rem 0;
+    }
+
+    &__title {
+        font-size: 2.25rem;
+        line-height: 2.5rem;
+        font-weight: 700;
+        letter-spacing: -0.025em;
+        color: $titleactiveColor;
+
+        @media (min-width: 640px) {
+            font-size: 3rem;
+            line-height: 1;
+        }
+    }
+
+    &__subtitle {
+        margin-top: 0.75rem;
+        font-size: 1.125rem;
+        line-height: 1.75rem; 
+        font-weight: 500;
+        letter-spacing: -0.025em;
+        color: $titleactiveColor;
+
+        @media (min-width: 640px) {
+            font-size: 1.25rem;
+            line-height: 1.75rem;
+        }
+    }
+
+    &__description {
+        margin-top: 1rem;
+        line-height: 1.5;
+        max-width: 20rem;
+    }
+
+    &__Nav {
+        display: none;
+
+        @media (min-width: 1024px) { 
+            display: block;
+        }
+
+        &__List {
+            margin-top: 4rem;
+            width: max-content;
+
+            &__Link {
+                display: flex;
+                align-items: center;
+                padding-top: 0.75rem;
+                padding-bottom: 0.75rem;
+                &.active {
+                    .Header__Nav__List__Link__indicator {
+                        width: 4rem;
+                        background-color: $titleactiveColor;
+                    }
+                    .Header__Nav__List__Link__text {
+                        color: $titleactiveColor;
+                    }
+                }
+
+                &__indicator {
+                    margin-right: 1rem;
+                    height: 1px;
+                    width: 2rem;
+                    background-color: #475569;
+                    transition-property: all;
+                    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+                    transition-duration: 150ms;
+                    
+                }
+
+                &__text {
+                    font-size: 0.75rem;
+                    line-height: 1rem;
+                    font-weight: 700;
+                    text-transform: uppercase;
+                    letter-spacing: 0.1em;
+                    color: $textColor2;
+                }
+
+                &:hover {
+                    .Header__Nav__List__Link__indicator {
+                        width: 4rem;
+                        background-color: $titleactiveColor;
+                    }
+
+                    .Header__Nav__List__Link__text {
+                        color: $titleactiveColor;
+                    }
+                }
+                
+                &:focus-visible {
+                    .Header__Nav__List__Link__indicator {
+                        width: 4rem;
+                        background-color: $titleactiveColor;
+                    }
+
+                    .Header__Nav__List__Link__text {
+                        color: $titleactiveColor;
+                    }
+                }
+            }
+        }
+    }
+
+    &__NetworksList {
+        margin-left: 0.25rem;
+        margin-top: 2rem;
+        display: flex;
+        align-items: center;
+
+        &__Item {
+            margin-right: 1.25rem;
+            font-size: 0.75rem;
+            line-height: 1rem;
+
+            &__Link {
+                display: block;
+                color: white;
+                opacity: 0.4;
+                transition: 0.5s all;
+                
+                &:hover {
+                    opacity: 1;
+                }
+
+                span {
+                    position: absolute;
+                    width: 1px;
+                    height: 1px;
+                    padding: 0;
+                    margin: -1px;
+                    overflow: hidden;
+                    clip: rect(0, 0, 0, 0);
+                    white-space: nowrap;
+                    border-width: 0;
+                }
+
+                svg {
+                    height: 1.5rem;
+                    width: 1.5rem;
+                }
+            }
+        }
+    }
+}
